@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECG Compliance Dashboard</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', sans-serif;
+        background: #f4f6f9;
+    }
+
+    .container {
+        display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 250px;
+        height: 100vh;
+        background: #1e293b;
+        color: white;
+        padding: 20px;
+    }
+
+    .sidebar h2 {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .sidebar a {
+        display: block;
+        color: #cbd5e1;
+        text-decoration: none;
+        margin: 15px 0;
+        padding: 10px;
+        border-radius: 6px;
+    }
+
+    .sidebar a:hover {
+        background: #334155;
+    }
+
+    /* Main */
+    .main {
+        flex: 1;
+        padding: 20px;
+    }
+
+    /* Header */
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btn {
+        background: #2563eb;
+        color: white;
+        padding: 10px 18px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background: #1d4ed8;
+    }
+
+    /* Cards */
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .card {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+        margin: 0;
+        font-size: 18px;
+        color: #64748b;
+    }
+
+    .card p {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    /* Sections */
+    .section {
+        margin-top: 30px;
+    }
+
+    .iframe-container {
+        width: 100%;
+        height: 600px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    
+
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Header -->
+        <div class="header">
+            <h1>Portfolio Company - Alpha Corp</h1>
+            <button class="btn" onclick="goToAssessment()">Go to Assessment</button>
+        </div>
+
+        <!-- KPI Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Compliance Score</h3>
+                <p>72%</p>
+            </div>
+
+            <div class="card">
+                <h3>Pending Actions</h3>
+                <p>0</p>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <p>3</p>
+            </div>
+
+            <div class="card">
+                <h3>Low</h3>
+                <p style="color:rgb(0, 255, 0);">High</p>
+            </div>
+        </div>
+
+        <!-- Embedded Zoho Dashboard -->
+        <div class="section">
+            <h2>Analytics Overview</h2>
+
+            <div class="iframe-container">
+                <iframe 
+                    src="https://analytics.zoho.com/open-view/2863050000006421127/e9ae6e17ca6abe34869030f22a0812916fee656744ad3879aab1599b1941e3fe?ZOHO_CRITERIA=(%22Company_name%22=%27Alpha%20Corp%27)">
+                </iframe>
+            </div>
+        </div>
+
+        <!-- Additional Section -->
+        <div class="section">
+            <h2>Compliance Insights</h2>
+            <div class="card">
+                <p>
+                    • Environmental score improving 📈 <br>
+                    • Governance risk needs attention ⚠️ <br>
+                    • Social metrics stable ✔️
+                </p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+function goToAssessment() {
+    // Replace with your actual assessment page
+    window.location.href = "assessment.html";
+}
+</script>
+
+</body>
+</html>
